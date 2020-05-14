@@ -1,0 +1,401 @@
+body {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  list-style-type: none;
+  text-align: center;
+}
+
+span {
+  color: #84bfda;
+}
+
+a {
+  color: grey;
+}
+
+/*========HEADER*===========
+-----------------------------------------------------*/
+header > nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0px;
+  width: 100%;
+  margin-bottom: 10%;
+  position: fixed;
+  z-index: 1;
+  background-color: #FEFEFE;
+}
+
+.menu-nav > li > a {
+  text-decoration: none;
+  color: grey;
+}
+
+.menu-nav > li > a:hover {
+  color: #84bfda;
+}
+
+.menu-nav > li {
+  list-style-type: none;
+  text-transform: none;
+  padding: 30px;
+  text-decoration: none;
+  color: grey;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.menu-nav > li:hover {
+  /*Lorsqu'on passe la souris, il y a une bordure top bleu*/
+  border-top: 3px solid #84bfda;
+}
+
+/*===MISE EN FORME DIAPORAMA====*/
+#container-diapo {
+  position: relative;
+  margin-top: 10%;
+}
+
+.timeline {
+  border-bottom: 5px solid #84bfda;
+  width: 10%;
+  margin: none;
+}
+
+.img_diapo {
+  width: 100%;
+}
+
+.titre1 {
+  color: white;
+  margin-left: 12%;
+  margin-top: 10%;
+}
+
+.sous-titre1 {
+  color: white;
+  margin-left: 12%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(174, 182, 191, 0.5);
+}
+
+.next {
+  right: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.prev {
+  left: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  text-align: left;
+}
+
+button {
+  background-color: #84bfda;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 8px;
+}
+
+button:hover {
+  border: 1px solid white;
+  color: grey;
+}
+
+/* =====SECTION SERVICES======
+------------------------------------------------------------*/
+#services {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.title {
+  text-align: center;
+}
+
+.fa {
+  /*FORME POINT DU TRAIT*/
+  color: #84bfda;
+  border-radius: 100%;
+  z-index: 0;
+  border: 4px solid white;
+}
+
+li > .fa-circle {
+  position: absolute;
+  right: 79%;
+  top: 40%;
+  border: 3px solid white;
+}
+
+div > .trait {
+  background-color: #ebebeb;
+  width: 200px;
+  height: 2px;
+  margin: auto;
+  z-index: 0;
+}
+
+div > .point {
+  width: 20px;
+  margin: auto;
+  transform: translate(0%, -40%);
+}
+
+.fas {
+  /*FORME ICON*/
+  color: #84bfda;
+  font-size: 30px;
+  padding: 5%;
+  margin: 20px;
+  align-items: center;
+  border: 2px solid #ebebeb;
+  border-radius: 100%;
+}
+
+#container-services {
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#container-services > li {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+#container-services > span {
+  color: black;
+}
+
+/* SECTION II PORTFOLIO
+
+-----------------------------------------------------------*/
+#portfolio {
+  background-color: whitesmoke;
+}
+
+#portfolio > nav {
+  display: flex;
+  justify-content: center;
+}
+
+.titre_projet {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-portfolio {
+  display: flex;
+  width: 35%;
+  border-radius: 5px;
+}
+
+.menu-portfolio > li {
+  list-style-type: none;
+  padding: 5px;
+  width: 100%;
+  align-items: center;
+}
+
+.menu-portfolio > li > a {
+  color: grey;
+  text-decoration: none;
+}
+
+.menu-portfolio > li > a:hover {
+  color: white;
+}
+
+.creative:hover, .corporate:hover, .portfolio:hover {
+  position: relative;
+  background: #88b7d5;
+}
+
+.creative, .corporate, .portfolio {
+  background-color: #c8c8c8;
+}
+
+.all_works {
+  position: relative;
+  background: #88b7d5;
+  border: 1px solid #c2e1f5;
+}
+
+.all_works:after, .all_works:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.all_works:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-top-color: #c2e1f5;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.all_works:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #88b7d5;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+#sous-section {
+  display: flex;
+  padding-top: 40px;
+  text-align: justify;
+}
+
+#galery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+figure img {
+  height: 200px;
+  width: auto;
+  width: 100%;
+  height: auto;
+}
+
+figure:hover {
+  opacity: 1;
+}
+
+figure {
+  position: relative;
+  width: 50%;
+  max-width: 200px;
+  justify-content: center;
+}
+
+figure > i {
+  size: 100px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  opacity: 0.1;
+}
+
+figure > figcaption {
+  position: absolute;
+  bottom: 3%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 90%;
+  transition: 0.1s ease;
+  opacity: 0;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
+
+figure > i:hover {
+  opacity: 1;
+  size: 100px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  border: 2px solid white;
+  border-radius: 100%;
+  padding: 5px;
+  color: white;
+  background-color: #84bfda;
+  z-index: 10;
+}
+
+/* ======SECTION III=========
+{{{{SUPERPOSITION DE LA CARTE ET LE FORMULAIRE DE CONTACT}}}}*/
+#carte_form {
+  position: relative;
+  /*POSITION RELATIVE DU BLOC FOOTER*/
+  background-color: #87CEFA;
+  /*Pour le filtre bleu, l'oppacity est sur iframe*/
+}
+
+form {
+  background-color: rgba(239, 243, 245, 0.9);
+  padding: 15px;
+  width: 300px;
+  top: 10%;
+  right: 5%;
+  position: absolute;
+}
+
+form > h2 {
+  font-size: 1.8em;
+  margin: 0;
+  text-align: left;
+}
+
+form > p {
+  text-align: left;
+}
+
+form > input, form > textarea {
+  width: 95%;
+  padding: 5px;
+  margin: 10px;
+  color: #999999;
+  border-color: 1px solid #cccccc;
+  border-radius: 5px 5px;
+  font-size: 1em;
+}
+
+form textarea {
+  height: 100px;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  opacity: 0.6;
+  /* PERMET DE FAIRE RESSORTIR LE BACKGROUND DE LA CARTE*/
+}
+
+footer {
+  font-size: 10px;
+  color: grey;
+}
+
+/*# sourceMappingURL=main.css.map */
