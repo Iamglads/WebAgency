@@ -1,10 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
   font-family: sans-serif;
-  list-style-type: none;
   text-align: center;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  color: grey;
+}
+
+h3 {
+  color: grey;
+}
+
+li {
+  list-style: none;
 }
 
 span {
@@ -13,74 +27,87 @@ span {
 
 a {
   color: grey;
+  text-decoration: none;
+  text-transform: none;
+}
+a:hover {
+  color: #84bfda;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #FEFEFE;
+}
+.menu-nav ul {
+  display: flex;
+}
+.menu-nav li {
+  padding: 1em;
+}
+.menu-nav li:hover {
+  border-top: 3px solid #84bfda;
+}
+@media screen and (max-width: 599px) {
+  .menu-nav {
+    display: block;
+  }
 }
 
 /*========HEADER*===========
 -----------------------------------------------------*/
-header > nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  top: 0px;
+header {
   width: 100%;
-  margin-bottom: 10%;
-  position: fixed;
-  z-index: 1;
-  background-color: #FEFEFE;
+  height: auto;
 }
-
-.menu-nav > li > a {
-  text-decoration: none;
-  color: grey;
-}
-
-.menu-nav > li > a:hover {
-  color: #84bfda;
-}
-
-.menu-nav > li {
-  list-style-type: none;
-  text-transform: none;
-  padding: 30px;
-  text-decoration: none;
-  color: grey;
-  display: inline-flex;
-  justify-content: flex-end;
-}
-
-.menu-nav > li:hover {
-  /*Lorsqu'on passe la souris, il y a une bordure top bleu*/
-  border-top: 3px solid #84bfda;
-}
-
-/*===MISE EN FORME DIAPORAMA====*/
-#container-diapo {
+header .container-diapo {
   position: relative;
-  margin-top: 10%;
 }
-
-.timeline {
-  border-bottom: 5px solid #84bfda;
-  width: 10%;
-  margin: none;
+header .bloc-text {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: left;
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  top: 50px;
+  padding: 3em;
 }
-
-.img_diapo {
+header .sous-titre {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+header button {
+  margin-top: 20px;
+  background-color: #84bfda;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+header button:hover {
+  opacity: 0.8;
+}
+header .img_diapo {
   width: 100%;
 }
-
-.titre1 {
-  color: white;
-  margin-left: 12%;
-  margin-top: 10%;
+@media screen and (max-width: 599px) {
+  header .img_diapo {
+    display: none;
+  }
 }
-
-.sous-titre1 {
-  color: white;
-  margin-left: 12%;
-}
-
-.prev, .next {
+header .prev, header .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -91,108 +118,108 @@ header > nav {
   font-size: 18px;
   background-color: rgba(174, 182, 191, 0.5);
 }
-
-.next {
+@media screen and (max-width: 599px) {
+  header .prev, header .next {
+    display: none;
+  }
+}
+header .next {
   right: 0;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
 }
-
-.prev {
+header .prev {
   left: 0;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  text-align: left;
-}
-
-button {
-  background-color: #84bfda;
-  color: white;
-  font-size: 18px;
-  border: none;
-  padding: 8px;
-}
-
-button:hover {
-  border: 1px solid white;
-  color: grey;
+@media screen and (max-width: 599px) {
+  header {
+    height: auto;
+  }
 }
 
 /* =====SECTION SERVICES======
 ------------------------------------------------------------*/
 #services {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.title {
-  text-align: center;
-}
-
-.fa {
-  /*FORME POINT DU TRAIT*/
-  color: #84bfda;
-  border-radius: 100%;
-  z-index: 0;
-  border: 4px solid white;
-}
-
-li > .fa-circle {
-  position: absolute;
-  right: 79%;
-  top: 40%;
-  border: 3px solid white;
-}
-
-div > .trait {
-  background-color: #ebebeb;
-  width: 200px;
-  height: 2px;
-  margin: auto;
-  z-index: 0;
-}
-
-div > .point {
-  width: 20px;
-  margin: auto;
-  transform: translate(0%, -40%);
-}
-
-.fas {
-  /*FORME ICON*/
-  color: #84bfda;
-  font-size: 30px;
-  padding: 5%;
-  margin: 20px;
-  align-items: center;
-  border: 2px solid #ebebeb;
-  border-radius: 100%;
-}
-
-#container-services {
   display: block;
-  justify-content: space-around;
+}
+#services .section_services-heading {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+#services .section_services-heading p {
+  text-align: center;
+  margin-top: 20px;
+}
+#services .sous-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+@media screen and (max-width: 599px) {
+  #services .sous-section {
+    display: block;
+  }
+}
+@media screen and (max-width: 766px) {
+  #services .sous-section {
+    display: block;
+  }
+}
+@media screen and (max-width: 599px) {
+  #services {
+    padding: 0px;
+    margin-top: 400px;
+  }
 }
 
-#container-services > li {
+.container-services {
+  display: block;
+}
+.container-services li {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  align-items: center;
+  text-align: left;
+  padding: 1em;
+}
+@media screen and (max-width: 599px) {
+  .container-services li {
+    display: block;
+  }
 }
 
-#container-services > span {
-  color: black;
+.bloc-img-services {
+  display: flex;
+}
+
+.far {
+  color: #84bfda;
+  border-radius: 100%;
+  font-size: 3em;
+}
+
+.fa-cubes, .fa-chart-pie, .fa-chart-line {
+  padding: 1em;
+  border: 2px solid #84bfda;
+  border-radius: 100%;
+}
+
+.trait {
+  background-color: #84bfda;
+  width: 150px;
+  height: 2px;
+  margin: auto;
+}
+
+.icons {
+  /*FORME ICON*/
+  color: #84bfda;
+  font-size: 20px;
+  padding: 1em;
 }
 
 /* SECTION II PORTFOLIO
@@ -201,37 +228,30 @@ div > .point {
 #portfolio {
   background-color: whitesmoke;
 }
-
-#portfolio > nav {
+#portfolio nav {
   display: flex;
   justify-content: center;
 }
-
-.titre_projet {
+#portfolio .title {
+  margin-top: 20px;
+}
+#portfolio .menu-portfolio {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-}
-
-.menu-portfolio {
-  display: flex;
-  width: 35%;
+  width: 45%;
   border-radius: 5px;
 }
-
-.menu-portfolio > li {
-  list-style-type: none;
-  padding: 5px;
-  width: 100%;
-  align-items: center;
+#portfolio .menu-portfolio li {
+  padding: 0.5em;
 }
-
-.menu-portfolio > li > a {
-  color: grey;
-  text-decoration: none;
-}
-
-.menu-portfolio > li > a:hover {
+#portfolio .menu-portfolio li:hover {
   color: white;
+}
+@media screen and (max-width: 599px) {
+  #portfolio .menu-portfolio {
+    width: 100%;
+  }
 }
 
 .creative:hover, .corporate:hover, .portfolio:hover {
@@ -274,24 +294,28 @@ div > .point {
   margin-left: -8px;
 }
 
-#sous-section {
-  display: flex;
-  padding-top: 40px;
-  text-align: justify;
-}
+/* SECTION galery
 
+-----------------------------------------------------------*/
 #galery {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
-
-figure img {
+#galery img {
+  width: 200px;
   height: 200px;
-  width: auto;
-  width: 100%;
-  height: auto;
+}
+#galery .bloc-projets {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+@media screen and (max-width: 599px) {
+  #galery .bloc-projets {
+    width: 100%;
+  }
 }
 
 figure:hover {
@@ -299,38 +323,19 @@ figure:hover {
 }
 
 figure {
+  padding: 0.5em;
   position: relative;
   width: 50%;
   max-width: 200px;
-  justify-content: center;
 }
-
-figure > i {
+figure i {
   size: 100px;
   position: absolute;
   top: 50%;
   right: 10%;
   opacity: 0.1;
 }
-
-figure > figcaption {
-  position: absolute;
-  bottom: 3%;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 90%;
-  transition: 0.1s ease;
-  opacity: 0;
-  font-size: 15px;
-  padding: 10px;
-  text-align: center;
-}
-
-figure:hover figcaption {
-  opacity: 1;
-}
-
-figure > i:hover {
+figure i:hover {
   opacity: 1;
   size: 100px;
   position: absolute;
@@ -342,6 +347,21 @@ figure > i:hover {
   color: white;
   background-color: #84bfda;
   z-index: 10;
+}
+figure figcaption {
+  position: absolute;
+  bottom: 3%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 90%;
+  transition: 0.1s ease;
+  opacity: 0;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+figure figcaption:hover {
+  opacity: 1;
 }
 
 /* ======SECTION III=========
@@ -355,24 +375,27 @@ figure > i:hover {
 
 form {
   background-color: rgba(239, 243, 245, 0.9);
-  padding: 15px;
+  padding: 1em;
   width: 300px;
   top: 10%;
   right: 5%;
   position: absolute;
 }
-
-form > h2 {
+@media screen and (max-width: 599px) {
+  form {
+    width: 100%;
+    padding: 1em;
+  }
+}
+form h2 {
   font-size: 1.8em;
   margin: 0;
   text-align: left;
 }
-
-form > p {
+form p {
   text-align: left;
 }
-
-form > input, form > textarea {
+form input, form textarea {
   width: 95%;
   padding: 5px;
   margin: 10px;
@@ -381,8 +404,7 @@ form > input, form > textarea {
   border-radius: 5px 5px;
   font-size: 1em;
 }
-
-form textarea {
+form form textarea {
   height: 100px;
 }
 
@@ -392,10 +414,10 @@ iframe {
   opacity: 0.6;
   /* PERMET DE FAIRE RESSORTIR LE BACKGROUND DE LA CARTE*/
 }
-
-footer {
-  font-size: 10px;
-  color: grey;
+@media screen and (max-width: 599px) {
+  iframe {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
