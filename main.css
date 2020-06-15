@@ -8,6 +8,13 @@ body {
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+@media screen and (max-width: 599px) {
+  body {
+    background-image: url(./webagency_images/images/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
 
 h2 {
   margin-bottom: 0.5em;
@@ -65,11 +72,15 @@ a:hover {
 }
 
 /*========NAV FOR MOBILE=========*/
+.menu-sidebar {
+  background: white;
+}
 .menu-sidebar .img-logo-sidebar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   box-shadow: 0px 1px 3px 1px #e4e4e4;
+  background-color: white;
   height: 100px;
 }
 .menu-sidebar .img-logo-sidebar .logo {
@@ -86,7 +97,7 @@ a:hover {
   width: auto;
   margin-top: -320px;
   height: auto;
-  background-color: #84bfda;
+  background-color: white;
 }
 .menu-sidebar .nav-sidebar li {
   padding: 1em;
@@ -148,13 +159,8 @@ header .bloc-text .bloc-text-flex {
 header .header_paragraph {
   color: white;
   margin-top: 40px;
-  font-size: #a3a3a3;
+  font-size: 1.3em;
   font-family: "Indie Flower", cursive;
-}
-@media screen and (max-width: 599px) {
-  header .header_paragraph {
-    color: black;
-  }
 }
 header .sous-titre,
 header .header_title {
@@ -166,7 +172,6 @@ header .header_title {
   header .sous-titre,
 header .header_title {
     font-size: 2em;
-    color: #a3a3a3;
   }
 }
 header .webagency {
@@ -236,6 +241,7 @@ header .prev {
 /* =====SECTION SERVICES====== */
 #services {
   display: block;
+  background: white;
 }
 #services .section_services-heading {
   display: flex;
@@ -291,7 +297,7 @@ header .prev {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    height: 300px;
+    height: 250px;
   }
 }
 .container-services li p {
@@ -304,9 +310,16 @@ header .prev {
     border-radius: 15px;
   }
 }
+@media screen and (max-width: 599px) {
+  .container-services .title-description {
+    text-align: center;
+  }
+}
 
 .bloc-img-services {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .far {
@@ -335,6 +348,13 @@ header .prev {
   color: #84bfda;
   font-size: 20px;
   padding: 1em;
+}
+@media screen and (max-width: 599px) {
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* ======SECTION II PORTFOLIO===== */
@@ -492,6 +512,7 @@ figure figcaption:hover {
   justify-content: center;
   align-items: center;
   background-image: url(./webagency_images/images/footer.jpg);
+  background-repeat: no-repeat;
 }
 
 .form {
@@ -551,18 +572,6 @@ figure figcaption:hover {
 }
 .form .btn-blue:hover {
   background-color: #84bfda;
-}
-
-iframe {
-  width: 100%;
-  height: 600px;
-  opacity: 0.6;
-  /* PERMET DE FAIRE RESSORTIR LE BACKGROUND DE LA CARTE*/
-}
-@media screen and (max-width: 599px) {
-  iframe {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
