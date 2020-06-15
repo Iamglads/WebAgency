@@ -1,5 +1,6 @@
 $mainColor: rgb(132, 191, 218);
-$greyColor: grey;
+$greyColorBold: rgb(163, 163, 163);
+$greyColor: rgb(228, 228, 228);
 
 * {
   margin: 0;
@@ -9,6 +10,7 @@ $greyColor: grey;
 body {
   font-family: sans-serif;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 h2 {
   margin-bottom: 0.5em;
@@ -20,11 +22,10 @@ h3 {
 li {
   list-style: none;
 }
-
 span {
   color: rgb(132, 191, 218);
+  font-weight: bold;
 }
-
 a {
   color: grey;
   text-decoration: none;
@@ -33,7 +34,6 @@ a {
     color: $mainColor;
   }
 }
-
 .menu-nav {
   display: flex;
   justify-content: space-evenly;
@@ -41,10 +41,10 @@ a {
   width: 100%;
   height: 100px;
   background-color: #fefefe;
-  ul {
+  .main-nav {
     display: flex;
     @media screen and (max-width: 599px) {
-      display: block;
+      display: none;
     }
   }
 
@@ -55,14 +55,62 @@ a {
     }
   }
   @media screen and (max-width: 599px) {
-    display: block;
-    height: auto;
+    display: none;
   }
 }
 
-/*========HEADER*===========
-    -----------------------------------------------------*/
+/*========NAV FOR MOBILE=========*/
 
+.menu-sidebar {
+  .img-logo-sidebar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 1px 3px 1px $greyColor;
+    height: 100px;
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-top: 15px;
+    }
+  }
+  .fa-bars {
+    color: $mainColor;
+    font-size: 25px;
+  }
+
+  .nav-sidebar {
+    display: none;
+    width: auto;
+    margin-top: -320px;
+    height: auto;
+    background-color: $mainColor;
+    li {
+      padding: 1em;
+    }
+    @media screen and (max-width: 599px) {
+      display: block;
+    }
+  }
+  .nav-sidebar-js {
+    display: block;
+    width: auto;
+    margin-top: 0;
+    height: auto;
+    background-color: $mainColor;
+    li {
+      padding: 1em;
+    }
+    @media screen and (max-width: 599px) {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 599px) {
+    display: none;
+  }
+}
+
+/*========HEADER=========*/
 header {
   width: 100%;
   height: auto;
@@ -70,24 +118,44 @@ header {
     position: relative;
   }
   .bloc-text {
-    width: 60%;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: center;
     text-align: left;
     color: #f2f2f2;
-    font-size: 15px;
     position: absolute;
     top: 50px;
-    padding: 3em;
-    
+    @media screen and (max-width: 599px) {
+      width: 90%;
+      top: none;
+      padding: none;
+      margin-top: 100px;
+    }
+    .bloc-text-flex{
+      width: 80%;
+    }
   }
-  .sous-titre {
+  .header_paragraph {
+    color: white;
+    margin-top: 40px;
+    font-size: $greyColorBold;
+    font-family: "Indie Flower", cursive;
+    @media screen and (max-width: 599px) {
+      color: black;
+    }
+  }
+  .sous-titre,
+  .header_title {
     font-weight: bold;
     margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 3em;
+    @media screen and (max-width: 599px) {
+      font-size: 2em;
+      color: $greyColorBold;
+    }
+  }
+  .webagency {
+    font-weight: bold;
   }
 
   button {
@@ -107,7 +175,7 @@ header {
 
   .img_diapo {
     width: 100%;
-    @media screen and (max-width: 599px) {
+    @media screen and (max-width: 668px) {
       display: none;
     }
   }
@@ -140,15 +208,15 @@ header {
     border-bottom-right-radius: 50%;
   }
 
-  @media screen and (max-width: 599px) {
+  @media screen and (max-width: 768px) {
     height: auto;
-    background: black;
-
+  }
+  @media screen and (max-width: 599px) {
+    background-image: url(./webagency_images/images/bg-mobile.jpg);
   }
 }
 
-/* =====SECTION SERVICES======
-    ------------------------------------------------------------*/
+/* =====SECTION SERVICES====== */
 #services {
   display: block;
   .section_services-heading {
@@ -169,13 +237,18 @@ header {
     @media screen and (max-width: 599px) {
       display: block;
     }
-    @media screen and (max-width: 8è9px) {
+    @media screen and (max-width: 899px) {
       display: block;
     }
   }
   @media screen and (max-width: 599px) {
     padding: 0px;
-    margin-top: 400px;
+    margin-top: 568px;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding: 0px;
+    margin-top: 60px;
   }
 }
 
@@ -187,7 +260,19 @@ header {
     text-align: left;
     padding: 1em;
     @media screen and (max-width: 599px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+       height: 300px;
+    }
+    p {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 599px) {
       display: block;
+      border: 1px solid $greyColor;
+      border-radius: 15px;
     }
   }
 }
@@ -224,19 +309,17 @@ header {
   padding: 1em;
 }
 
-/* SECTION II PORTFOLIO
-    
-    -----------------------------------------------------------*/
-
+/* ======SECTION II PORTFOLIO===== */
 #portfolio {
   background-color: rgb(245, 245, 245);
   nav {
     display: flex;
     justify-content: center;
     @media screen and (max-width: 599px) {
-       display: none;
-      }
+      display: none;
+    }
   }
+  .titre_projet,
   .title {
     margin-top: 20px;
   }
@@ -304,23 +387,21 @@ header {
   margin-left: -8px;
 }
 
-/* SECTION galery
-    
-    -----------------------------------------------------------*/
+/* ======SECTION GALERY====== */
 #galery {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
   img {
     width: 200px;
-    height: 200px;
+    height: auto;
   }
   .bloc-projets {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
-
+    width: 90%;
     @media screen and (max-width: 599px) {
       width: 100%;
     }
@@ -331,10 +412,8 @@ figure:hover {
 }
 
 figure {
-  padding: 0.5em;
   position: relative;
-  width: 50%;
-  max-width: 200px;
+  margin: 20px;
   i {
     size: 100px;
     position: absolute;
@@ -372,27 +451,24 @@ figure {
   }
 }
 
-/* ======SECTION III=========
-    {{{{SUPERPOSITION DE LA CARTE ET LE FORMULAIRE DE CONTACT}}}}*/
+/* ======SECTION CARTE======*/
 
-#carte_form {
-  position: relative; /*POSITION RELATIVE DU BLOC FOOTER*/
-  background-color: #87cefa; /*Pour le filtre bleu, l'oppacity est sur iframe*/
+#carte_form { 
+  height: auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  background-image: url(./webagency_images/images/footer.jpg);
 }
 
-form {
-  background-color: rgba(239, 243, 245, 0.9);
-  width: 250px;
-  top: 10%;
-  position: absolute;
-  display: block;
+.form {
+  width: 400px;
+ 
   padding: 1em;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.603);
   div {
-    margin: 10px;
+    margin: 20px;
   }
   @media screen and (max-width: 599px) {
     background-color: none;
@@ -410,30 +486,41 @@ form {
     text-align: left;
   }
 
-  input,
+  input{
+    background: none;
+    border: 1px solid $greyColor;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 0.8em;
+    padding: 0.5em;
+    &:focus{
+      background-color: white;
+    }
+  }
   textarea {
     width: 100%;
-    height: 20px;
-    color: #999999;
-    border: 1px solid #cccccc;
+    height: 50px;
+    border: 1px solid $greyColor;
+    background:none;
     border-radius: 5px 5px;
     font-size: 0.8em;
-    padding: 0.5;
+    padding: 0.5em;
     &:focus {
-      border: 1px solid $mainColor;
+      background-color: white;
     }
   }
 
-  textarea {
-    height: 50px;
-    box-sizing:border-box;
-  }
 
-  .btn-blue{
+  .btn-blue {
+    color: white;
+    border: 1px solid $greyColor;
+    padding: 0.6em;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
       background-color: $mainColor;
-      color: white;
-      border: none;
-      margin-top: 20px;
+    }
   }
 }
 

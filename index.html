@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Web Agency - spécialisée dans le web design et le référencement en Guadeloupe">
 	<link rel="shortcut icon" href="webagency_images/images/favicon.png">
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="main.css">
@@ -20,7 +22,20 @@
 		<div class="img-logo">
 			<img src="webagency_images/images/logo.png" alt="logo" class="logo">
 		</div>
-		<ul>
+		<ul class="main-nav">
+			<li class="accueil"> <a href="active"> Accueil</a></li>
+			<li class="services"> <a href="#services"> Services</a></li>
+			<li class="portfolio_nav"> <a href="#portfolio"> Portfolio</a></li>
+			<li class="contact"> <a href="#contact"> Contact</a></li>
+		</ul>
+	</nav>
+	<!--MOBILE-->
+	<nav class="menu-sidebar">
+		<div class="img-logo-sidebar">
+			<img src="webagency_images/images/logo.png" alt="logo" class="logo">
+			<a href="#" class="menu-burgur"><i class="fas fa-bars"></i></a>
+		</div>
+		<ul class="nav-sidebar">
 			<li class="accueil"> <a href="active"> Accueil</a></li>
 			<li class="services"> <a href="#services"> Services</a></li>
 			<li class="portfolio_nav"> <a href="#portfolio"> Portfolio</a></li>
@@ -32,9 +47,11 @@
 			<div class="mySlides fade">
 				<img class="img_diapo" src="webagency_images/images/slider/bg1.jpg">
 				<div class="bloc-text">
-					<div>
-						<h1 class="titre1"> <span>WEBAGENCY</span> : L'AGENCE DE TOUS <br> VOS PROJETS !</h1>
-						<p class="sous-titre"> Vous avez un projet web ? La webagency vous aide à le réaliser !</p>
+					<div class="bloc-text-flex">
+						<h1 class="header_title"> <span class="webagency">WEBAGENCY</span> : L'AGENCE DE TOUS VOS
+							PROJETS WEB!</h1>
+						<p class="header_paragraph"> Vous avez un projet web ? La webagency vous aide à le réaliser !
+						</p>
 						<button>Plus d'infos </button>
 					</div>
 				</div>
@@ -126,49 +143,40 @@
 				<figure>
 					<img src="webagency_images/images/portfolio/01.jpg" alt="image">
 					<figcaption> Création pour une marque de luxe</figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
 
 				<figure>
 					<img src="webagency_images/images/portfolio/02.jpg" alt="image">
 					<figcaption> Lorem ipsum dolor sit amet</figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
 
 				<figure>
 					<img src="webagency_images/images/portfolio/03.jpg" alt="image">
 					<figcaption> Lorem ipsum dolor sit amet</figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
 
 				<figure>
 					<img src="webagency_images/images/portfolio/04.jpg" alt="image">
 					<figcaption> Lorem ipsum dolor sit amet </figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
 
 				<figure>
 					<img src="webagency_images/images/portfolio/05.jpg" alt="image">
 					<figcaption> Lorem ipsum dolor sit amet</figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
 
 				<figure>
 					<img src="webagency_images/images/portfolio/06.jpg" alt="image">
 					<figcaption> Lorem ipsum dolor sit amet</figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
-
 				<figure>
 					<img src="webagency_images/images/portfolio/07.jpg" alt="image">
 					<figcaption> Lorem ipsum dolor sit amet</figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
 
 				<figure>
 					<img src="webagency_images/images/portfolio/08.jpg" alt="image">
 					<figcaption> Lorem ipsum dolor sit amet</figcaption>
-					<i class="far fa-eye"></i>
 				</figure>
 			</div>
 		</div>
@@ -176,36 +184,29 @@
 
 	<!--=====================SECTION III========================-->
 	<section id="carte_form">
-		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15899.919508615243!2d-52.305228248755995!3d4.942992244562299!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sus!4v1551839000700"></iframe>
-
-		<form method="post" action="#">
+		<form method="post" action="#" class="form">
 			<div>
 				<h2 id="titre_contact">Contact Info</h2>
-				<p>WebAgency SAS<br />
-					25 Rue d'Hauteville 00000 Paris<br />
-					Tel : 01 02 03 04 05
+				<p>WebAgency SAS</p>
+				<p>25 Rue d'Hauteville 00000 Paris</p>
+				<p>Tel : 01 02 03 04 05</p>
 				</p>
 			</div>
 			<div>
-				<label for="name"></label>
 				<input type="text" name="name" placeholder="Nom" id="name" />
+				<span class="input-border"></span>
 			</div>
-
 			<div>
-				<label for="email"></label>
 				<input type="email" name="email" placeholder="Email" id="email" />
+				<span class="input-border"></span>
 			</div>
-
 			<div>
-				<label for="topic"></label>
 				<input type="text" name="sujet" placeholder="Sujet" id="topic" />
+				<div class="input-border"></div>
 			</div>
 			<div>
 				<textarea name="message" placeholder="Message"></textarea>
 			</div>
-			
-
 			<input class="btn-blue" type="submit" value="Envoyé" />
 		</form>
 	</section>
